@@ -7,43 +7,87 @@ namespace Calculator_assignment
         static void Main(string[] args)
         {
 
-            Console.WriteLine("please insert + ,- ,* ,/  as operators! ");
 
-            string strnumber1 = Console.ReadLine();
-            string op = Console.ReadLine();
-            string strnumber2 = Console.ReadLine();
-            double number1 = Convert.ToDouble(strnumber1);
-            double number2 = Convert.ToDouble(strnumber2);
+            for (int x = 0; x < int.MaxValue; x++)
 
-
-            double addition = number1 + number2;
-            double subtraction = number1 - number2;
-            double multiply = number1 * number2;
-            double division = number1 / number2;
-
-
-
-            switch (op)
             {
-                case "+":
-                    Console.WriteLine(addition);
-                    break;
+                Console.WriteLine("Please insert c to clear the page!");
 
-                case " - ":
-                    Console.WriteLine(subtraction);
-                    break;
+                Console.WriteLine("please insert + ,- ,* ,/  as operators! ");
 
-                case "*":
-                    Console.WriteLine(multiply);
-                    break;
-
-                case "/":
-                    Console.WriteLine(division);
-                    break;
+                string op = Console.ReadLine();
 
 
+                switch (op)
+                {
+                    case "+":
+                        {
+                            Console.WriteLine("please insert number 1:");
+                            double number1 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("please insert number 2:");
 
+                            double number2 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("{0}+{1}= {2}", number1, number2, number1 + number2);
+
+                            break;
+                        }
+
+
+
+                    case "-":
+                        {
+                            Console.WriteLine("please insert number 1:");
+                            double number1 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("please insert number 2:");
+                            double number2 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("{0}-{1}= {2}",number1 ,number2 , number1 - number2);
+
+                            break;
+                        }
+
+                    case "*":
+                        {
+                            Console.WriteLine("please insert number 1:");
+                            double number1 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("please insert number 2:");
+                            double number2 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("{0}*{1}= {2}", number1, number2, number1 * number2);
+
+                            break;
+                        }
+
+                    case "/":
+                        {
+                            Console.WriteLine("please insert number 1:");
+                            double number1 = double.Parse(Console.ReadLine());
+                            Console.WriteLine("please insert number 2:");
+                            double number2 = double.Parse(Console.ReadLine());
+                            if (number2 == 0)
+                            {
+                                Console.WriteLine( "Invalid Number");
+                            }
+                            else
+
+                                Console.WriteLine("{0}/{1}= {2}", number1, number2, number1 / number2);
+
+                            break;
+                        }
+
+                    case "c":
+                        {
+                            Console.ReadLine();
+                            Console.Clear();
+
+                            break;
+                        }
+
+
+
+
+                }
             }
+                
+                
             Console.ReadKey();
         }
     }
