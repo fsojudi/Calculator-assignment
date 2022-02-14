@@ -27,7 +27,7 @@ namespace Calculator_assignment
                             Console.WriteLine("please insert number 2:");
 
                             double number2 = double.Parse(Console.ReadLine());
-                            Console.WriteLine("{0}+{1}= {2}", number1, number2, number1 + number2);
+                            Console.WriteLine("{0}+{1}= {2}", number1, number2, Addition(number1 , number2 ));
 
                             break;
                         }
@@ -40,7 +40,7 @@ namespace Calculator_assignment
                             double number1 = double.Parse(Console.ReadLine());
                             Console.WriteLine("please insert number 2:");
                             double number2 = double.Parse(Console.ReadLine());
-                            Console.WriteLine("{0}-{1}= {2}",number1 ,number2 , number1 - number2);
+                            Console.WriteLine("{0}-{1}= {2}",number1 ,number2 , Substraction(number1 , number2));
 
                             break;
                         }
@@ -51,7 +51,7 @@ namespace Calculator_assignment
                             double number1 = double.Parse(Console.ReadLine());
                             Console.WriteLine("please insert number 2:");
                             double number2 = double.Parse(Console.ReadLine());
-                            Console.WriteLine("{0}*{1}= {2}", number1, number2, number1 * number2);
+                            Console.WriteLine("{0}*{1}= {2}", number1, number2, multiplication(number1 , number2));
 
                             break;
                         }
@@ -68,7 +68,7 @@ namespace Calculator_assignment
                             }
                             else
 
-                                Console.WriteLine("{0}/{1}= {2}", number1, number2, number1 / number2);
+                                Console.WriteLine("{0}/{1}= {2}", number1, number2, Divition( number1 , number2));
 
                             break;
                         }
@@ -90,5 +90,30 @@ namespace Calculator_assignment
                 
             Console.ReadKey();
         }
+        public static double Addition(double num1,double num2)
+        {
+            double sum = num1 + num2;
+            return sum;
+        }
+
+        public static double Substraction(double num1, double num2)
+        {
+            double minus = num1 - num2;
+            return minus ;
+        }
+
+        public static double Divition (double num1, double num2)
+        {
+            double divide = num1 / num2;
+            return divide;
+        }
+
+        public static double multiplication(double num1, double num2)
+        {
+            double muliply = num1 * num2;
+            return muliply ;
+        }
+
+
     }
 }
